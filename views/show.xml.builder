@@ -1,6 +1,6 @@
 xml.instruct!
 
-xml.urlset "xmlns" => "http://www.google.com/schemas/sitemap/0.84" do
+xml.urlset "xmlns" => "http://www.sitemaps.org/schemas/sitemap/0.9", "xsi:schemaLocation" => "http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/siteindex.xsd" do
   xml.url do
     xml.loc         url_for(root_url)
     xml.lastmod     w3c_date(Time.now)
