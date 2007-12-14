@@ -87,15 +87,15 @@ dd {
 
 dl.l2_sections {
 	border-left: 4px solid #eee;
-margin-top: 15px;
+	margin-top: 15px;
 }
 
 dt.l2_section_title {
 	border-bottom: none;
-font-size: 14px;
+	font-size: 14px;
 	margin: 0 0 3px 20px;
 	padding: 0 0 3px 0;
-line-height: 1.6;
+	line-height: 1.6;
 }
 
 dd.l2_pages {
@@ -104,9 +104,13 @@ dd.l2_pages {
 	padding: 0 0 0 0;
 }
 
+ul {
+	list-style: none;
+}
+
 li {
-font-size: 14px;
-line-height: 1.6;
+	font-size: 14px;
+	line-height: 1.6;
 }
 
 /* ------------------------------------------------------------
