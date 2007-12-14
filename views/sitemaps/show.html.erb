@@ -54,25 +54,18 @@
 			The ID below, id="section_title", is actually the real title
 			of the section used as the dynamic semantic unique identifier.
 		-->
-		<dt class="l1_section_title" id="section_title"><a href="#section_link" title="Section Description" class="loc">Section Title</a></dt>
+		<%= @widgets.each_key do |k| %>
+		<dt class="l1_section_title" id="section_title"><%= link_to nil, url_for(send(@sitemap_config[k]["index_named_route"].to_sym)) %></dt>
 		<dd class="l1_pages">
 			<ul>
-				<li><a href="#page" title="Page Description">Give me 5 Minutes, and I'll give you the nuts and bolts of SEO</a></li>
-				<li><a href="#page" title="Page Description">Search engines are like little kids looking for their toys</a></li>
-				<li><a href="#page" title="Page Description">Page Title</a></li>
-				<li><a href="#page" title="Page Description">Page Title</a></li>
-				<li><a href="#page" title="Page Description">Page Title</a></li>
-				<li><a href="#page" title="Page Description">Page Title</a></li>
-				<li><a href="#page" title="Page Description">Page Title</a></li>
-				<li><a href="#page" title="Page Description">Page Title</a></li>
-				<li><a href="#page" title="Page Description">Page Title</a></li>
-				<li><a href="#page" title="Page Description">Page Title</a></li>
-				<li><a href="#page" title="Page Description">Page Title</a></li>
-				<li><a href="#page" title="Page Description">Page Title</a></li>
+				<%= @widgets[k].each do |widget| %>
+				<li><%= link_to nil, widget %></li>
+				<%= end %>
 			</ul>
 		</dd>
+		<%= end %>
 
-		<dt class="l1_section_title" id="section_title"><a href="#section_link" title="Section Description" class="loc">Section Title</a></dt>
+		<!-- <dt class="l1_section_title" id="section_title"><a href="#section_link" title="Section Description" class="loc">Section Title</a></dt>
 		<dd class="l1_pages">
 			<ul>
 				<li><a href="#page" title="Page Description">Page Title</a></li>
@@ -126,7 +119,7 @@
 				<li><a href="#page" title="Page Description">Page Title</a></li>
 				<li><a href="#page" title="Page Description">Page Title</a></li>
 			</ul>
-		</dd>
+		</dd> -->
 
 	</dl>
 	
