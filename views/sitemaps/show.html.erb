@@ -54,16 +54,16 @@
 			The ID below, id="section_title", is actually the real title
 			of the section used as the dynamic semantic unique identifier.
 		-->
-		<%= @widgets.each_key do |k| %>
+		<% @widgets.each_key do |k| %>
 		<dt class="l1_section_title" id="section_title"><%= link_to nil, url_for(send(@sitemap_config[k]["index_named_route"].to_sym)) %></dt>
 		<dd class="l1_pages">
 			<ul>
-				<%= @widgets[k].each do |widget| %>
+				<% @widgets[k].each do |widget| %>
 				<li><%= link_to nil, widget %></li>
-				<%= end %>
+				<% end %>
 			</ul>
 		</dd>
-		<%= end %>
+		<% end %>
 
 		<!-- <dt class="l1_section_title" id="section_title"><a href="#section_link" title="Section Description" class="loc">Section Title</a></dt>
 		<dd class="l1_pages">
