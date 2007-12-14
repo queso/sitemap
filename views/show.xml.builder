@@ -18,7 +18,7 @@ xml.urlset "xmlns:xsi" => "http://www.w3.org/2001/XMLSchema-instance", "xmlns" =
   @widgets[k].each do |widget|
       xml.url do
         xml.loc         polymorphic_url(widget)
-        xml.lastmod     w3c_date(Time.now)
+        xml.lastmod     w3c_date(widget.updated_at || Time.now)
         xml.changefreq  @sitemap_config[k]["frequency_show"]
         xml.priority    @sitemap_config[k]["prioity"]
       end
