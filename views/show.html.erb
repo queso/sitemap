@@ -9,7 +9,10 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="copyright" content="Your Company Name" />
 	<meta name="lang" content="en" />
-	<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.4.0/build/reset/reset-min.css"> 
+
+	<!-- CSS Stylesheets -->
+	<link rel="stylesheet" href="../assets/reset-min.css" type="text/css" />
+	<link rel="stylesheet" href="../assets/sitemap.css" type="text/css" media="screen" title="Sitemap Stylesheet" />
 
 	<!-- JavaScript -->
 
@@ -28,12 +31,20 @@
 
 <body class="">
 
+<div id="container">
+
 	<div id="site_and_page_title">
-		<h1 id="branding"><span>Use this tag to populate the site and page title. This is the core h1 that should be tied to the site and page title.</span></h1>
-	</div>
-	
-	<div id="site_description">
-		<p>Use this tag to populate the description for your site. Content should include the high level details of your site.</p>
+		
+		<!--
+			Use this tag to populate the site and page title.
+			This is the core h1 that should be tied to the site and page title.
+		-->		
+		<h1 id="branding"><a href="#homepage" rel="home"><span>Sitemap: Site and Page Title</span></a></h1>
+		
+		<div id="site_description">
+			<p>Use this tag to populate the description for your site.</p>
+			<p>Content should include the high level details of your site.</p>
+		</div>
 	</div>
 	
 	<hr />
@@ -118,12 +129,16 @@
 				<li><a href="#page" title="Page Description">Page Title</a></li>
 			</ul>
 		</dd>
+
+	</dl>
 	
 	<hr />
 	
 	<div id="site_footer">
 		<p>Copyright 2007 <a href="#homepage" title="Populate this tag with the description for your site" rel="home">Site Name</a>, All Rights Reserved.</p>
 	</div>
+
+</div>
 	
 </body>
 </html>

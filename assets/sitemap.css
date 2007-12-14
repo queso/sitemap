@@ -1,0 +1,95 @@
+/* ------------------------------------------------------------
+
+    Company:   IMAGE202 ENTERTAINMENT
+    Author:    Adam Stacoviak, adam@image202.com
+
+------------------------------------------------------------ */
+
+/* ------------------------------------------------------------
+	Structure
+------------------------------------------------------------ */
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html, body {
+	height: 100%;
+	margin: 0 0 1px 0;
+	padding: 0;
+}
+
+body {
+	font: 72.5% Verdana, Arial, sans-serif;
+	color: #333;
+	background: #fff;
+}
+
+#container {
+	width: 700px;
+	margin: 0 auto;
+	padding: 60px 0 50px 0;
+}
+
+#site_and_page_title {
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 18px;
+	text-align: center;
+}
+
+#site_and_page_title h1 {
+	color: #000;
+	font: bold 44px Helvetica, Arial, sans-serif;
+	margin-bottom: 30px;
+}
+
+#site_and_page_title h1 a,
+#site_and_page_title h1 a:hover {
+	color: #000;
+	text-decoration: none;
+}
+
+#site_description p {
+	color: #656565;
+	font: italic 20px Tahoma, Georgia, Times New Roman, sans-serif;
+	margin-bottom: 12px;
+}
+
+#site_map {
+	padding: 20px 45px;
+}
+
+#site_footer {
+	border-top: 1px solid #ccc;
+	padding-top: 18px;
+	text-align: center;
+}
+
+/* ------------------------------------------------------------
+	Links
+------------------------------------------------------------ */
+a {
+	color: #36c;
+	text-decoration: none;
+}
+	
+a:hover {
+	color: #933;
+	text-decoration: underline;
+}
+
+/* Kill Dotted Lines in Firefox */
+a:focus, a:active {
+	outline: none;
+}
+
+/* ------------------------------------------------------------
+	Common, Misc...
+------------------------------------------------------------ */
+.hidden, hr {
+	display: none;
+}
+
+.clear {
+	clear: both;
+}
