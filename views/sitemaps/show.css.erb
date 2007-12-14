@@ -6,7 +6,7 @@
 ------------------------------------------------------------ */
 
 /* ------------------------------------------------------------
-	Structure
+	Base
 ------------------------------------------------------------ */
 * {
 	margin: 0;
@@ -55,22 +55,25 @@ body {
 	margin-bottom: 12px;
 }
 
-#site_map {
-	padding: 20px 45px;
-}
-
 #site_footer {
 	border-top: 1px solid #ccc;
 	padding-top: 18px;
 	text-align: center;
 }
 
+/* ------------------------------------------------------------
+	Site Map
+------------------------------------------------------------ */
+#site_map {
+	padding: 20px 45px;
+}
+
 dt {
+	border-bottom: 1px solid #eee;
 	color: #000;
 	font: bold 18px Helvetica, Arial, sans-serif;
 	margin-bottom: 12px;
 	padding-bottom: 12px;
-	border-bottom: 1px solid #eee;
 }
 
 dt a,
@@ -85,20 +88,20 @@ dd {
 	padding-bottom: 15px;
 }
 
-dl.l2_sections {
+dl dl {
 	border-left: 4px solid #eee;
 	margin-top: 15px;
 }
 
-dt.l2_section_title {
+dl dl dt {
 	border-bottom: none;
 	font-size: 14px;
+	line-height: 1.6;
 	margin: 0 0 3px 20px;
 	padding: 0 0 3px 0;
-	line-height: 1.6;
 }
 
-dd.l2_pages {
+dl dl dd {
 	border-bottom: none;
 	margin: 0 0 15px 20px;
 	padding: 0 0 0 0;
