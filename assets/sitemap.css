@@ -65,6 +65,50 @@ body {
 	text-align: center;
 }
 
+dt {
+	color: #000;
+	font: bold 18px Helvetica, Arial, sans-serif;
+	margin-bottom: 12px;
+	padding-bottom: 12px;
+	border-bottom: 1px solid #eee;
+}
+
+dt a,
+dt a:hover {
+	color: #000;
+	text-decoration: none;
+}
+
+dd {
+	border-bottom: 3px double #ccc;
+	margin-bottom: 15px;
+	padding-bottom: 15px;
+}
+
+dl.l2_sections {
+	border-left: 4px solid #eee;
+margin-top: 15px;
+}
+
+dt.l2_section_title {
+	border-bottom: none;
+font-size: 14px;
+	margin: 0 0 3px 20px;
+	padding: 0 0 3px 0;
+line-height: 1.6;
+}
+
+dd.l2_pages {
+	border-bottom: none;
+	margin: 0 0 15px 20px;
+	padding: 0 0 0 0;
+}
+
+li {
+font-size: 14px;
+line-height: 1.6;
+}
+
 /* ------------------------------------------------------------
 	Links
 ------------------------------------------------------------ */
