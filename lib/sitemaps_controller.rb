@@ -7,6 +7,8 @@ class SitemapsController < ActionController::Base
     respond_to do |format|
       format.html
       format.xml {render :template => "show.xml.builder", :layout => false}
+      format.css
+      format.xsl
     end
   end
   
