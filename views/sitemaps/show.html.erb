@@ -55,8 +55,8 @@
 			of the section used as the dynamic semantic unique identifier.
 		-->
 		<% @widgets.each_key do |k| %>
-		<dt class="l1_section_title" id="section_title"><%= link_to nil, url_for(send(@sitemap_config[k]["index_named_route"].to_sym)) %></dt>
-		<dd class="l1_pages">
+		<dt class="section_title" id="section_title"><%= link_to nil, url_for(send(@sitemap_config[k]["index_named_route"].to_sym)) %></dt>
+		<dd class="pages">
 			<ul>
 				<% @widgets[k].each do |widget| %>
 				<li><%= link_to nil, widget %></li>
@@ -65,17 +65,17 @@
 		</dd>
 		<% end %>
 
-		<!-- <dt class="l1_section_title" id="section_title"><a href="#section_link" title="Section Description" class="loc">Section Title</a></dt>
-		<dd class="l1_pages">
+		<!-- <dt class="section_title" id="section_title"><a href="#section_link" title="Section Description" class="loc">Section Title</a></dt>
+		<dd class="pages">
 			<ul>
 				<li><a href="#page" title="Page Description">Page Title</a></li>
 				<li><a href="#page" title="Page Description">Page Title</a></li>
 				<li><a href="#page" title="Page Description">Use this tag to populate the description</a></li>
 				<li><a href="#page" title="Page Description">Page Title</a></li>
 				<li>
-					<dl class="l2_sections">
-						<dt class="l2_section_title" id="section_title"><a href="#section_link" title="Section Description" class="loc">Section Title</a></dt>
-						<dd class="l2_pages">
+					<dl class="sections">
+						<dt class="section_title" id="section_title"><a href="#section_link" title="Section Description" class="loc">Section Title</a></dt>
+						<dd class="pages">
 							<ul>
 								<li><a href="#page" title="Page Description">Use this tag to populate the description</a></li>
 								<li><a href="#page" title="Page Description">Page Title</a></li>
@@ -103,8 +103,8 @@
 			</ul>
 		</dd>
 
-		<dt class="l1_section_title" id="section_title"><a href="#section_link" title="Section Description" class="loc">Section Title</a></dt>
-		<dd class="l1_pages">
+		<dt class="section_title" id="section_title"><a href="#section_link" title="Section Description" class="loc">Section Title</a></dt>
+		<dd class="pages">
 			<ul>
 				<li><a href="#page" title="Page Description">Page Title</a></li>
 				<li><a href="#page" title="Page Description">Page Title</a></li>
