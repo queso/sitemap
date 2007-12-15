@@ -4,7 +4,7 @@
 
 <head>
 
-	<title>Sitemap: Site and Page Title</title>
+	<title>Sitemap: <%= (@site[:name] || "Rails Web Application") %></title>
 
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="copyright" content="Your Company Name" />
@@ -38,11 +38,10 @@
 			Use this tag to populate the site and page title.
 			This is the core h1 that should be tied to the site and page title.
 		-->		
-		<h1 id="branding"><a href="#homepage" rel="home"><span>Sitemap: Site and Page Title</span></a></h1>
+		<h1 id="branding"><%= link_to "<span>Sitemap: #{(@site[:name] || "Rails Web Application")} </span>", root_url %></h1>
 		
 		<div id="site_description">
-			<p>Use this tag to populate the description for your site.</p>
-			<p>Content should include the high level details of your site.</p>
+			<p><%= @site[:description] %></p>
 		</div>
 	</div>
 	
@@ -54,9 +53,21 @@
 			The ID below, id="section_title", is actually the real title
 			of the section used as the dynamic semantic unique identifier.
 		-->
+		<% @static_links.each_key do |k| %>
+			<dt class="l1_section_title" id="section_title"><%= k.to_s.capitalize %></dt>
+			<dd class="l1_pages">
+				<ul>
+					<% @static_links[k].each_key do |i| %>
+					<li><%= link_to @static_links[k][i]["name"], url_for(send(@static_links[k][i]["url"].to_sym)) %></li>
+					<% end %>
+				</ul>
+			</dd>
+		<% end %>
+		
 		<% @widgets.each_key do |k| %>
-		<dt class="section_title" id="section_title"><%= link_to nil, url_for(send(@sitemap_config[k]["index_named_route"].to_sym)) %></dt>
+		<dt class="section_title" id="section_title"><%= link_to k.to_s.capitalize, url_for(send(@sitemap_config[:widgets][k]["index_named_route"].to_sym)) %></dt>
 		<dd class="pages">
+
 			<ul>
 				<% @widgets[k].each do |widget| %>
 				<li><%= link_to nil, widget %></li>
@@ -126,7 +137,7 @@
 	<hr />
 	
 	<div id="site_footer">
-		<p>Copyright 2007 <a href="#homepage" title="Populate this tag with the description for your site" rel="home">Site Name</a>, All Rights Reserved.</p>
+		<p>Copyright 2007 <%= link_to (@site[:name] || "Rails Web Application"), root_url %>, All Rights Reserved.</p>
 	</div>
 
 </div>
