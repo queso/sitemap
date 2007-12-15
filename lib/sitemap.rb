@@ -19,7 +19,7 @@ module Queso
     
       def widgets
         widgets = {}
-        sitemap_config.each_key do |k|
+        sitemap_config[:widgets].each_key do |k|
           widgets[k] = find_widgets(sitemap_config[:widgets][k]["model"].constantize)
         end
         widgets
