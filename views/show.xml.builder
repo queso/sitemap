@@ -16,7 +16,7 @@ xml.urlset "xmlns:xsi" => "http://www.w3.org/2001/XMLSchema-instance", "xsi:sche
   end  
   
 @static_links.each_key do |k|
-  @static_links[k].each do |static_link|
+  @static_links[k].each do |key, static_link|
     xml.url do
       xml.loc         url_for(send(@static_links[k][key]["url"].to_sym))
       xml.lastmod     w3c_date(Time.now)
