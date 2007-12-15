@@ -7,6 +7,24 @@ xml.urlset "xmlns:xsi" => "http://www.w3.org/2001/XMLSchema-instance", "xsi:sche
     xml.changefreq  "always"
     xml.priority    1.0
   end
+
+  xml.url do
+    xml.loc         url_for(sitemap_url)
+    xml.lastmod     w3c_date(Time.now)
+    xml.changefreq  "always"
+    xml.priority    1.0
+  end  
+  
+@static_links.each_key do |k|
+  @static_links[k].each do |static_link|
+    xml.url do
+      xml.loc         url_for(send(static_link["url"].to_sym))
+      xml.lastmod     w3c_date(Time.now)
+      xml.changefreq  static_link["frequency"]
+      xml.priority    static_link["prioity"]
+    end 
+  end
+end
   
 @widgets.each_key do |k|
   xml.url do
