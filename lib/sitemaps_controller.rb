@@ -4,7 +4,7 @@ class SitemapsController < ActionController::Base
     s = Queso::SEO::Sitemap.new
     @widgets = s.widgets
     @sitemap_config = s.sitemap_config
-    @site = s.site
+    @site = SitemapSetting.find(:first)
     @static_links = s.static_links
     respond_to do |format|
       format.html
