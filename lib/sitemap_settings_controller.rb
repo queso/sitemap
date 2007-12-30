@@ -11,10 +11,6 @@ class SitemapSettingsController < ActionController::Base
     end
   end
   
-  def widgets
-    @widgets = SitemapWidget.find(:all)
-  end
-  
   def static_links
     @static_links = SitemapStaticLink.find(:all)
   end
