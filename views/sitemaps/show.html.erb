@@ -67,7 +67,7 @@
 		<dd class="pages">
 
 			<ul>
-				<% @widgets.find_children.each do |child| %>
+				<% widget.find_children.each do |child| %>
 				<li><%= link_to nil, child %></li>
 				<% end %>
 			</ul>
