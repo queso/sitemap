@@ -1,0 +1,24 @@
+<% form_for(@static_link) do |f| %>
+<div>
+	<%= f.label :name, "The name for the static link" %>
+	<%= f.text_field :name %>
+</div>
+
+<div>
+	<%= f.label :url, "The named route for the static link" %>
+	<%= f.text_field :url %>
+</div>
+
+<div>
+	<%= f.label :frequency, "How often does the static link page change?" %>
+	<%= f.select :frequency, SitemapWidget.frequencies %>
+</div>
+
+<div>
+	<%= f.label :priority, "How important is this static link to your site?" %>
+	<%= f.select :priority, SitemapWidget.priorities %>
+</div>
+
+<%= f.submit "Save this static link" %>
+
+<% end %>
