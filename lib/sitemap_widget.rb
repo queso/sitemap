@@ -9,7 +9,7 @@ class SitemapWidget < ActiveRecord::Base
   end
 
   def find_children(options = {})
-    widget_model_contstant.find(:all, options)
+    widget_model_constant.find(:all, options)
   end
   
   def widget_model_constant
