@@ -7,5 +7,13 @@ class SitemapWidget < ActiveRecord::Base
   def self.frequencies
     {"Always" => "always", "Daily" => "daily", "Weekly" => "weekly", "Monthly" => "monthly", "Yearly" => "yearly"}
   end
+
+  def find_children(options = {})
+    widget_model_contstant.find(:all, options)
+  end
+  
+  def widget_model_constant
+    widget_model.constantize
+  end
   
 end

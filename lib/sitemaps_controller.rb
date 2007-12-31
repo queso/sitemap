@@ -1,14 +1,12 @@
 class SitemapsController < ActionController::Base
   
   def show
-    s = Queso::SEO::Sitemap.new
-    @widgets = s.widgets
-    @sitemap_config = s.sitemap_config
+    @widgets = SitemapWidget.find(:all)
     @site = SitemapSetting.find(:first)
-    @static_links = s.static_links
+    @static_links = SitemapStaticLink.find(:all)
     respond_to do |format|
       format.html
-      format.xml {render :template => "show.xml.builder", :layout => false}
+      format.xml
       format.css
       format.xsl
     end
