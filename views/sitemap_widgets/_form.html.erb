@@ -1,0 +1,29 @@
+<% form_for(@widget) do |f| %>
+<div>
+	<%= f.label :widget_model, "The model for the widget" %>
+	<%= f.text_field :widget_model %>
+</div>
+
+<div>
+	<%= f.label :index_named_route, "The named route for the widget index page" %>
+	<%= f.text_field :index_named_route %>
+</div>
+
+<div>
+	<%= f.label :frequency_index, "How often does the widget index page change?" %>
+	<%= f.select :frequency_index, SitemapWidget.frequencies %>
+</div>
+
+<div>
+	<%= f.label :frequency_show, "How often do the widget show pages change?" %>
+	<%= f.select :frequency_show, SitemapWidget.frequencies %>
+</div>
+
+<div>
+	<%= f.label :priority, "How important is this widget to your site?" %>
+	<%= f.select :priority, SitemapWidget.priorities %>
+</div>
+
+<%= f.submit "Save this widget" %>
+
+<% end %>
