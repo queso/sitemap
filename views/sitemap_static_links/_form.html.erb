@@ -19,6 +19,11 @@
 	<%= f.select :priority, SitemapWidget.priorities %>
 </div>
 
+<div>
+	<%= f.label :section %>
+	<%= f.text_field :section %>
+</div>
+
 <%= f.submit "Save this static link" %>
 
 <% end %>
