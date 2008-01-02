@@ -25,7 +25,9 @@ module Queso
         end
         
         def ping_search_engine(url)
-          open("http://#{url}//ping?sitemap=#{sitemap_url}")
+          if location = SitemapSetting.xml_location
+            open("http://#{url}//ping?sitemap=#{location}")
+          end
         end
         
       end
