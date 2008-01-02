@@ -3,7 +3,7 @@ class SitemapsController < ActionController::Base
   def show
     @widgets = SitemapWidget.find(:all)
     @site = SitemapSetting.find(:first)
-    @static_links = SitemapStaticLink.find(:all)
+    @static_links = SitemapStaticLink.find(:all, :group => :section)
     respond_to do |format|
       format.html
       format.xml

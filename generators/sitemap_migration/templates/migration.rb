@@ -13,6 +13,7 @@ class <%= class_name %> < ActiveRecord::Migration
       t.string :name
       t.float :priority
       t.string :frequency
+      t.string :section
       
       t.timestamps
     end

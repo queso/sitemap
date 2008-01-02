@@ -53,14 +53,14 @@
 			The ID below, id="section_title", is actually the real title
 			of the section used as the dynamic semantic unique identifier.
 		-->
-		<% @static_links.each do |static_link| %>
-			<dt class="section_title" id="section_title"><%= static_link.name.to_s.capitalize %></dt>
-			<dd class="pages">
-				<ul>
-					<li><%= link_to static_link.name, url_for(send(static_link.url.to_sym)) %></li>
-				</ul>
-			</dd>
-		<% end %>
+		<dt class="section_title" id="section_title">Site links</dt>
+		<dd class="pages">
+			<ul>
+				<% @static_links.each do |static_link| %>
+				<li><%= link_to static_link.name, url_for(send(static_link.url.to_sym)) %></li>
+				<% end %>
+			</ul>
+		</dd>
 		
 		<% @widgets.each do |widget| %>
 		<dt class="section_title" id="section_title"><%= link_to widget.widget_model.to_s.capitalize, url_for(send(widget.index_named_route.to_sym)) %></dt>
