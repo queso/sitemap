@@ -1,4 +1,5 @@
 class SitemapStaticLinksController < ActionController::Base
+  layout "sitemap_plugin"
   
   def index
     @static_links = SitemapStaticLink.find(:all)

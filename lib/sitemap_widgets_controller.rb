@@ -1,4 +1,5 @@
 class SitemapWidgetsController < ActionController::Base
+  layout "sitemap_plugin"
   
   def index
     @widgets = SitemapWidget.find(:all)

@@ -1,4 +1,5 @@
 class SitemapSettingsController < ActionController::Base
+  layout "sitemap_plugin"
 
   def index
     @settings = SitemapSetting.find(:first) || SitemapSetting.create()
