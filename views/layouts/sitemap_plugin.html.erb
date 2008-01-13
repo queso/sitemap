@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+
+<head>
+
+	<title>Sitemap: <%= (@site.name || "Rails Web Application") %></title>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="copyright" content="Your Company Name" />
+	<meta name="lang" content="en" />
+
+	<!-- CSS Stylesheets -->
+	<link rel="stylesheet" href="sitemap.css" type="text/css" media="screen" title="Sitemap Stylesheet" />
+
+	<!-- JavaScript -->
+
+	
+	<!-- RSS Auto Discovery -->
+
+	
+	<!-- Site Description -->
+	<meta name="description" content="<%= @site.description %>" />
+	
+	<!-- Search Engine Indexing -->
+	<meta name="robots" content="index, follow" />
+	<meta name="googlebot" content="index, follow" />
+
+</head>
+
+<body class="">
+
+<div id="container">
+
+	<div id="site_and_page_title">
+		
+		<!--
+			Use this tag to populate the site and page title.
+			This is the core h1 that should be tied to the site and page title.
+		-->		
+		<h1 id="branding"><%= link_to "<span>Sitemap: #{(@site.name || "Rails Web Application")} </span>", root_url %></h1>
+		
+		<div id="site_description">
+			<p><%= @site.description %></p>
+		</div>
+	</div>
+	
+	<hr />
+	
+	<%= yield %>
+	
+	<hr />
+	
+	<div id="site_footer">
+		<p>Copyright 2007 <%= link_to (@site.name || "Rails Web Application"), root_url %>, All Rights Reserved.</p>
+	</div>
+
+</div>
+	
+</body>
+</html>
