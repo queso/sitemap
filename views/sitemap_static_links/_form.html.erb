@@ -1,29 +1,33 @@
+<h2>Editing <%= @static_link.name %></h2>
+
 <% form_for(@static_link) do |f| %>
-<div>
+<p>
 	<%= f.label :name, "The name for the static link" %>
 	<%= f.text_field :name %>
-</div>
+</p>
 
-<div>
+<p>
 	<%= f.label :url, "The named route for the static link" %>
 	<%= f.text_field :url %>
-</div>
+</p>
 
-<div>
+<p>
 	<%= f.label :frequency, "How often does the static link page change?" %>
 	<%= f.select :frequency, SitemapWidget.frequencies %>
-</div>
+</p>
 
-<div>
+<p>
 	<%= f.label :priority, "How important is this static link to your site?" %>
 	<%= f.select :priority, SitemapWidget.priorities %>
-</div>
+</p>
 
-<div>
+<p>
 	<%= f.label :section %>
 	<%= f.text_field :section %>
-</div>
+</p>
 
-<%= f.submit "Save this static link" %>
+<div id="save_actions">
+	<p><%= f.submit "Save this static link" %> or <%= link_to "Cancel", sitemap_static_links_url %></p>
+</div>
 
 <% end %>

@@ -71,7 +71,7 @@
 
 			<ul>
 				<% widget.find_children.each do |child| %>
-				<li><%= link_to nil, child %></li>
+				<li><%= link_to child.to_param, child %></li>
 				<% end %>
 			</ul>
 		</dd>

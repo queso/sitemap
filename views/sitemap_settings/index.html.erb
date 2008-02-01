@@ -1,8 +1,10 @@
+<h2>Configure your Sitemap</h2>
 
+<p>Configure your sitemap <em>Site Name</em>, <em>Description</em> and sitemap <em>XML Location</em>.</p>
 
 <% form_for(@settings) do |f| %>
 <p>
-	<%= f.label :name%>
+	<%= f.label :name, "Site Name" %>
 	<%= f.text_field :name %>
 </p>
 
@@ -12,10 +14,12 @@
 </p>
 
 <p>
-	<%= f.label :xml_location %>
+	<%= f.label :xml_location, "XML Location <span style=\"text-transform: none;\">(For example: http://www.yourdomain.com/sitemap.xml)</span>" %>
 	<%= f.text_field :xml_location %>
 </p>
 
-<%= submit_tag "Save" %>
+<div id="save_actions">
+	<p><%= submit_tag "Save" %></p>
+</div>
 
 <% end %>

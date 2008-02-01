@@ -1,29 +1,33 @@
+<h2>Editing <%= @widget.widget_model %></h2>
+
 <% form_for(@widget) do |f| %>
-<div>
+<p>
 	<%= f.label :widget_model, "The model for the widget" %>
 	<%= f.text_field :widget_model %>
-</div>
+</p>
 
-<div>
+<p>
 	<%= f.label :index_named_route, "The named route for the widget index page" %>
 	<%= f.text_field :index_named_route %>
-</div>
+</p>
 
-<div>
+<p>
 	<%= f.label :frequency_index, "How often does the widget index page change?" %>
 	<%= f.select :frequency_index, SitemapWidget.frequencies %>
-</div>
+</p>
 
-<div>
+<p>
 	<%= f.label :frequency_show, "How often do the widget show pages change?" %>
 	<%= f.select :frequency_show, SitemapWidget.frequencies %>
-</div>
+</p>
 
-<div>
+<p>
 	<%= f.label :priority, "How important is this widget to your site?" %>
 	<%= f.select :priority, SitemapWidget.priorities %>
-</div>
+</p>
 
-<%= f.submit "Save this widget" %>
+<div id="save_actions">
+	<p><%= f.submit "Save this widget" %> or <%= link_to "Cancel", sitemap_widgets_url %></p>
+</div>
 
 <% end %>

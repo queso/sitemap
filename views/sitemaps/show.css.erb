@@ -20,7 +20,7 @@ html, body {
 }
 
 body {
-	font: 72.5% Verdana, Arial, sans-serif;
+	font: 62.5% Verdana, Arial, sans-serif;
 	color: #333;
 	background: #fff;
 }
@@ -39,7 +39,7 @@ body {
 
 #site_and_page_title h1 {
 	color: #000;
-	font: bold 44px Helvetica, Arial, sans-serif;
+	font: bold 4.4em Helvetica, Arial, sans-serif;
 	margin-bottom: 30px;
 }
 
@@ -61,6 +61,80 @@ body {
 	text-align: center;
 }
 
+#content {
+	padding: 20px 10px;
+	position: relative;
+}
+
+h2 {
+	border-bottom: 1px solid #eee;
+	color: #000;
+	font: bold 18px Helvetica, Arial, sans-serif;
+	margin-bottom: 12px;
+	padding-bottom: 6px;
+}
+
+p {
+	font-size: 1.2em;
+	line-height: 1.6;
+	margin-bottom: 12px;
+}
+
+#content ul {
+	list-style: square;
+	padding-left: 14px;
+}
+
+#content ul li {
+	font-size: 1.2em;
+	margin-bottom: 5px;
+}
+
+#content ul#page_actions {
+	list-style: none;
+	padding-left: 0;
+	position: absolute;
+	top: 22px;
+	right: 10px;
+}
+
+#content ul#page_actions li {
+	font-size: 1.2em;
+	margin-bottom: 0;
+}
+
+label {
+	display: block;
+	padding-bottom: 3px;
+	text-transform: uppercase;
+	font-size: 95%;
+}
+
+input[type=text] {
+	font-size: 1.4em;
+	width: 100%;
+	padding: 5px
+}
+
+select {
+	font-size: 1.4em;
+	width: 40%;
+	padding: 5px
+}
+
+/* ------------------------------------------------------------
+	Nav Main
+------------------------------------------------------------ */
+#nav_main ul {
+	list-style: none;
+}
+
+#nav_main ul li {
+	display: inline;
+	font-size: 1.6em;
+	padding: 0 12px;
+}
+
 /* ------------------------------------------------------------
 	Site Map
 ------------------------------------------------------------ */
@@ -68,7 +142,7 @@ body {
 	padding: 20px 45px;
 }
 
-dt {
+#site_map dt {
 	border-bottom: 1px solid #eee;
 	color: #000;
 	font: bold 18px Helvetica, Arial, sans-serif;
@@ -76,24 +150,24 @@ dt {
 	padding-bottom: 12px;
 }
 
-dt a,
-dt a:hover {
+#site_map dt a,
+#site_map dt a:hover {
 	color: #000;
 	text-decoration: none;
 }
 
-dd {
+#site_map dd {
 	border-bottom: 3px double #ccc;
 	margin-bottom: 15px;
 	padding-bottom: 15px;
 }
 
-dl dl {
+#site_map dl dl {
 	border-left: 4px solid #eee;
 	margin-top: 15px;
 }
 
-dl dl dt {
+#site_map dl dl dt {
 	border-bottom: none;
 	font-size: 14px;
 	line-height: 1.6;
@@ -101,17 +175,17 @@ dl dl dt {
 	padding: 0 0 3px 0;
 }
 
-dl dl dd {
+#site_map dl dl dd {
 	border-bottom: none;
 	margin: 0 0 15px 20px;
 	padding: 0 0 0 0;
 }
 
-ul {
+#site_map ul {
 	list-style: none;
 }
 
-li {
+#site_map li {
 	font-size: 14px;
 	line-height: 1.6;
 }

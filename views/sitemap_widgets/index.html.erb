@@ -1,15 +1,13 @@
-
-
 <h2>Dynamic Sitemap Widgets</h2>
 
-<p>A Sitemap widget is a dynamic set of objects in your rails app, we use these to build the sitemap xml and xhtml for search engines to consume.</p>
+<ul id="page_actions">
+	<li><%= link_to "Add a Widget", new_sitemap_widget_url %></li>
+</ul>
+
+<p>A Sitemap widget is a dynamic set of objects in your rails app, we use these to build the sitemap XML and XHTML for search engines to consume.</p>
 
 <% for widget in @widgets %>
-	
-	<div>
-		<%= link_to widget.widget_model, edit_sitemap_widget_url(widget) %>
-	</div>
-
+	<ul>
+		<li><%= link_to widget.widget_model, edit_sitemap_widget_url(widget) %></li>
+	</ul>
 <% end %>
-
-<%= link_to "Add a Widget", new_sitemap_widget_url %>

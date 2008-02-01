@@ -7,7 +7,7 @@ end
 
 ActionController::Routing::Routes.draw do |map|
   map.resource :sitemap
-  map.resources :sitemap_settings, :collection => {:widgets => :get}
+  map.resources :sitemap_settings
   map.resources :sitemap_widgets
   map.resources :sitemap_static_links
 end

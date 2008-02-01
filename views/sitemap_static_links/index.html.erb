@@ -1,15 +1,13 @@
-
-
 <h2>Non-dynamic Sitemap Links</h2>
 
-<p>A Sitemap static link is a non-dynamic route in your rails app, we use these to help build the sitemap xml and xhtml for search engines to consume.</p>
+<ul id="page_actions">
+	<li><%= link_to "Add a Static link", new_sitemap_static_link_url %></li>
+</ul>
+
+<p>A Sitemap static link is a non-dynamic route in your rails app. We use these to help build the sitemap XML and XHTML for search engines to consume.</p>
 
 <% for static_link in @static_links %>
-	
-	<div>
-		<%= link_to static_link.name, edit_sitemap_static_link_url(static_link) %>
-	</div>
-
+	<ul>
+		<li><%= static_link.section %>: <%= link_to static_link.name, edit_sitemap_static_link_url(static_link) %></li>
+	</ul>
 <% end %>
-
-<%= link_to "Add a Static link", new_sitemap_static_link_url %>
