@@ -5,7 +5,7 @@ class SitemapWidget < ActiveRecord::Base
   end
   
   def self.frequencies
-    {"Always" => "always", "Daily" => "daily", "Weekly" => "weekly", "Monthly" => "monthly", "Yearly" => "yearly"}
+    [["Always", "always"], ["Daily", "daily"], ["Weekly", "weekly"], ["Monthly", "monthly"], ["Yearly", "yearly"]]
   end
 
   def find_children(options = {})
