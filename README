@@ -4,10 +4,13 @@ Sitemap
 Sitemap is a plugin to allow easy dynamic generation of xml and XHTML sitemaps for your website.  It follows the guidelines set forth by Google, MSN, and Yahoo. 
 
 
-Example
-=======
+Instructions
+============
 
-
+1. script/generate sitemap_migration
+2. Go to http://yoursite.com/sitemap_settings
+3. Fill in your static links and your widget links, plus a few basic settings
+4. Go to http://yoursite.com/sitemap.xml
 
 
 
