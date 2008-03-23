@@ -25,8 +25,9 @@ module Queso
         end
         
         def ping_search_engine(url)
-          if location = SitemapSetting.xml_location
-            open("http://#{url}//ping?sitemap=#{location}")
+          if location = SitemapSetting.find(:first).xml_location
+            response = open("http://#{url}//ping?sitemap=#{location}")
+            logger.info("Just tried to ping #{url} with a sitemap update.")
           end
         end
         
