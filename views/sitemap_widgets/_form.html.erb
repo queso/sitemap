@@ -12,6 +12,11 @@
 </p>
 
 <p>
+	<%= f.label :custom_finder, "A custom ActiveRecord finder method, leave blank for find(:all)" %>
+	<%= f.text_field :custom_finder %>
+</p>
+
+<p>
 	<%= f.label :frequency_index, "How often does the widget index page change?" %>
 	<%= f.select :frequency_index, SitemapWidget.frequencies %>
 </p>

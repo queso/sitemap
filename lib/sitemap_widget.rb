@@ -9,11 +9,16 @@ class SitemapWidget < ActiveRecord::Base
   end
 
   def find_children(options = {})
-    widget_model_constant.find(:all, options)
+    @finder = finder
+    widget_model_constant.send @finder, :all, options
   end
   
   def widget_model_constant
     widget_model.constantize
+  end
+  
+  def finder
+    (custom_finder || "find").to_sym
   end
   
 end
