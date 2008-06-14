@@ -8,6 +8,6 @@
 
 <% for static_link in @static_links %>
 	<ul>
-		<li><%= static_link.section %>: <%= link_to static_link.name, edit_sitemap_static_link_url(static_link) %></li>
+		<li><%= (static_link.section + ":") unless static_link.section.empty? %> <%= link_to static_link.name, edit_sitemap_static_link_url(static_link) %> | <%= link_to "delete", sitemap_static_link_url(static_link), :method => :delete, :style => "color:red;" %></li>
 	</ul>
 <% end %>
