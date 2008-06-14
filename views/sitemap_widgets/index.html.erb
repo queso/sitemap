@@ -8,6 +8,6 @@
 
 <% for widget in @widgets %>
 	<ul>
-		<li><%= link_to widget.widget_model, edit_sitemap_widget_url(widget) %></li>
+		<li><%= link_to widget.widget_model, edit_sitemap_widget_url(widget) %> | <%= link_to "delete", sitemap_widget_url(widget), :method => :delete, :style => "color:red" %></li>
 	</ul>
 <% end %>

@@ -1,16 +1,15 @@
 class SitemapWidgetsController < ActionController::Base
   layout "sitemap_plugin"
+  before_filter :find_widget, :only => [:edit, :update, :destroy]
   
   def index
     @widgets = SitemapWidget.find(:all)
   end
   
   def edit
-    @widget = SitemapWidget.find(params[:id])
   end
   
   def update
-    @widget = SitemapWidget.find(params[:id])
     if @widget.update_attributes(params[:sitemap_widget])
       redirect_to sitemap_widgets_url
     end
@@ -25,6 +24,17 @@ class SitemapWidgetsController < ActionController::Base
   
   def new
     @widget = SitemapWidget.new()
+  end
+  
+  def destroy
+    if @widget.destroy
+      redirect_to sitemap_widgets_url
+    end
+  end
+  
+  protected
+  def find_widget
+    @widget = SitemapWidget.find(params[:id])
   end
   
 end
