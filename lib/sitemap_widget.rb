@@ -18,7 +18,8 @@ class SitemapWidget < ActiveRecord::Base
   end
   
   def finder
-    (custom_finder || "find").to_sym
+    method = (custom_finder.empty? || custom_finder.nil?) ? "find" : custom_finder.to_s
+    method.to_sym
   end
   
 end
