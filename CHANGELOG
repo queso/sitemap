@@ -1,0 +1,15 @@
+==== 0.2    6/14/2008
+
+* Added the start of password requiring, but it appears more investigation is needed on the rails side of plugin handling
+
+* Fixed the sitemap_plugin layout footer url to point to our real domain
+
+* Add delete support to widgets and static links in the plugin admin area
+
+* Add Matt Polito's patch for dynamic copyright years
+
+* Fix the custom_finder to work with Rails 2.1
+
+==== 0.1    3/23/2008
+
+Released the first version!

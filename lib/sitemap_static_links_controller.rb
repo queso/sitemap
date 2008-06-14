@@ -1,5 +1,4 @@
-class SitemapStaticLinksController < ActionController::Base
-  layout "sitemap_plugin"
+class SitemapStaticLinksController < SitemapPluginController
   before_filter :find_static_link, :only => [:edit, :update, :destroy]
   
   def index

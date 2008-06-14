@@ -1,5 +1,4 @@
-class SitemapWidgetsController < ActionController::Base
-  layout "sitemap_plugin"
+class SitemapWidgetsController < SitemapPluginController
   before_filter :find_widget, :only => [:edit, :update, :destroy]
   
   def index
