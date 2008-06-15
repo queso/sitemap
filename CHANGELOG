@@ -1,5 +1,7 @@
 ==== 0.2    6/14/2008
 
+* Changed the directory structure to be more MVC like...  Almost like engines without extra plugins :)
+
 * Added the start of password requiring, but it appears more investigation is needed on the rails side of plugin handling
 
 * Fixed the sitemap_plugin layout footer url to point to our real domain
