@@ -1,7 +1,7 @@
 /* ------------------------------------------------------------
 
-    Company:   IMAGE202 ENTERTAINMENT
-    Author:    Adam Stacoviak, adam@image202.com
+    Company:   Handcrafted
+    Author:    Adam Stacoviak, adam@gethandcrafted.com
 
 ------------------------------------------------------------ */
 
@@ -20,43 +20,50 @@ html, body {
 }
 
 body {
-	font: 62.5% Verdana, Arial, sans-serif;
+	font: 62.5% Arial, Helvetica, sans-serif;
 	color: #333;
 	background: #fff;
 }
-
+/* ------------------------------------------------------------
+  Structure
+------------------------------------------------------------ */
 #container {
 	width: 700px;
 	margin: 0 auto;
-	padding: 60px 0 50px 0;
+	padding: 40px 0 20px 0;
 }
-
-#site_and_page_title {
-	border-bottom: 1px solid #ccc;
-	padding-bottom: 18px;
+/* ------------------------------------------------------------
+  Mast Head
+------------------------------------------------------------ */
+#mast_head {
+	border-bottom: 3px solid #ccc;
+	padding-bottom: 20px;
 	text-align: center;
 }
 
-#site_and_page_title h1 {
+#mast_head h1 {
 	color: #000;
 	font: bold 4.4em Helvetica, Arial, sans-serif;
 	margin-bottom: 30px;
 }
 
-#site_and_page_title h1 a,
-#site_and_page_title h1 a:hover {
+#mast_head h1 a,
+#mast_head h1 a:hover {
 	color: #000;
 	text-decoration: none;
 }
 
 #site_description p {
 	color: #656565;
-	font: italic 20px Tahoma, Georgia, Times New Roman, sans-serif;
+	font: normal 14px Helvetica, Arial, sans-serif;
+	letter-spacing: 1px;
 	margin-bottom: 12px;
+	text-transform: uppercase;
 }
 
 #site_footer {
 	border-top: 1px solid #ccc;
+	font-size: 11px;
 	padding-top: 18px;
 	text-align: center;
 }
@@ -75,7 +82,7 @@ h2 {
 }
 
 p {
-	font-size: 1.2em;
+	font-size: 12px;
 	line-height: 1.6;
 	margin-bottom: 12px;
 }
@@ -107,10 +114,12 @@ label {
 	display: block;
 	padding-bottom: 3px;
 	text-transform: uppercase;
-	font-size: 95%;
+	font-size: 12px;
+	font-weight: bold;
 }
 
 input[type=text] {
+	color: #353535;
 	font-size: 1.4em;
 	width: 100%;
 	padding: 5px
@@ -143,11 +152,11 @@ select {
 }
 
 #site_map dt {
-	border-bottom: 1px solid #eee;
+	border-bottom: 1px dashed #ccc;
 	color: #000;
-	font: bold 18px Helvetica, Arial, sans-serif;
-	margin-bottom: 12px;
-	padding-bottom: 12px;
+	font: bold 18px Arial, Helvetica, sans-serif;
+	margin-bottom: 6px;
+	padding-bottom: 6px;
 }
 
 #site_map dt a,
@@ -157,8 +166,8 @@ select {
 }
 
 #site_map dd {
-	border-bottom: 3px double #ccc;
-	margin-bottom: 15px;
+	border-bottom: 3px solid #ccc;
+	margin-bottom: 25px;
 	padding-bottom: 15px;
 }
 
@@ -167,19 +176,28 @@ select {
 	margin-top: 15px;
 }
 
-#site_map dl dl dt {
-	border-bottom: none;
-	font-size: 14px;
-	line-height: 1.6;
-	margin: 0 0 3px 20px;
-	padding: 0 0 3px 0;
+#site_map .sections {
+	border-left: 4px solid #eee;
+	margin: 10px 0 10px 0;
+	padding: 8px 0 8px 20px;
 }
 
-#site_map dl dl dd {
+#site_map .sections dt {
 	border-bottom: none;
-	margin: 0 0 15px 20px;
-	padding: 0 0 0 0;
+	color: #000;
+	font-size: 14px;
+	line-height: 1.6;
+	margin: 0 0 0 0;
+	padding: 0 0 10px 0;
 }
+
+#site_map .sections dd {
+	border-bottom: none;
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+
+#site_map .sections dt:before { /* */ }
 
 #site_map ul {
 	list-style: none;
@@ -199,7 +217,7 @@ a {
 }
 	
 a:hover {
-	color: #933;
+	color: #244891;
 	text-decoration: underline;
 }
 
