@@ -7,7 +7,7 @@
 	<xsl:template match="/">
 		<html xmlns="http://www.w3.org/1999/xhtml">
 			<head>
-				<title>XML Sitemap: <%= (@site.name || "Rails Web Application") %></title>
+				<title>XML Sitemap: <%= ((@site.blank? || @site.name.blank?) ? "Rails Web Application" : @site.name) %></title>
 				<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 				<style type="text/css">
 					* {
@@ -110,7 +110,7 @@
 				</style>
 			</head>
 			<body>
-				<h1>XML Sitemap: <%= (@site.name || "Rails Web Application") %></h1>
+				<h1>XML Sitemap: <%= ((@site.blank? || @site.name.blank?) ? "Rails Web Application" : @site.name) %></h1>
 				<div id="intro">
 					<p>This is an XML Sitemap generated using the <a href="http://seoandrails.com/plugins">Google Sitemap Generator Plugin for Rails</a>.</p>
 					<p class="last">It is intended to be processed by search engines such as <a href="http://www.google.com">Google</a>, <a href="http://search.yahoo.com/">Yahoo Search</a>, <a href="http://www.live.com">Microsoft Live Search</a>, and <a href="http://www.ask.com/">Ask.com
