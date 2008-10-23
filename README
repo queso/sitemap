@@ -9,7 +9,7 @@ Instructions
 
 1. script/generate sitemap_migration
 2. Go to http://yoursite.com/sitemap_settings
-3. Fill in your static links and your widget links, plus a few basic settings
+3. Fill in your static links and your widget links, plus a few basic settings (fill in username and password for basic http auth support)
 4. Go to http://yoursite.com/sitemap.xml
 
 
