@@ -4,7 +4,7 @@ class SitemapPluginController < ActionController::Base
   
   def check_sitemap_auth
     settings = SitemapSetting.find(:first)
-    return unless settings.username && settings.password
+    return unless settings && settings.username && settings.password
     authenticate_or_request_with_http_basic do |username, password|
       username == settings.username && password == settings.password
     end
