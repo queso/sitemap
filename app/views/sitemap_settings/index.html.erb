@@ -1,6 +1,6 @@
 <h2>Configure your Sitemap</h2>
 
-<p>Configure your sitemap <em>Site Name</em>, <em>Description</em> and sitemap <em>XML Location</em>.</p>
+<p>Configure your sitemap <em>Site Name</em>, <em>Description</em> and sitemap <em>XML Location</em>.  The <em>username</em> and <em>password</em> fields are optional if you want to password protect these settings.</p>
 
 <% form_for(@settings) do |f| %>
 <p>
@@ -16,6 +16,16 @@
 <p>
 	<%= f.label :xml_location, "XML Location <span style=\"text-transform: none;\">(For example: http://www.yourdomain.com/sitemap.xml)</span>" %>
 	<%= f.text_field :xml_location %>
+</p>
+
+<p>
+  <%= f.label :username %>
+  <%= f.text_field :username %>
+</p>
+
+<p>
+  <%= f.label :password %>
+  <%= f.password_field :password %>
 </p>
 
 <div id="save_actions">

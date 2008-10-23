@@ -4,7 +4,9 @@ class <%= class_name %> < ActiveRecord::Migration
       t.string :name
       t.string :description
       t.string :xml_location
-      
+      t.string :username
+      t.string :password
+    
       t.timestamps
     end
     
