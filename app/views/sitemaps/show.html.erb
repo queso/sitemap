@@ -138,6 +138,7 @@
 	
 	<div id="site_footer">
 		<p>Copyright&copy; <%= copyright_date %> <%= link_to ((@site.blank? || @site.name.blank?) ? "Rails Web Application" : @site.name), root_url %>, All Rights Reserved.</p>
+		<p>Rendered in <%= sprintf "%.3f", (Time.now - @rendering_start_time) %> seconds.</p>
 	</div>
 
 </div>

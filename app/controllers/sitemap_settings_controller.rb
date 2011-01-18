@@ -1,4 +1,5 @@
 class SitemapSettingsController < SitemapPluginController
+  unloadable
 
   def index
     @settings = SitemapSetting.find(:first) || SitemapSetting.create()

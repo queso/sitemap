@@ -28,6 +28,11 @@
   <%= f.password_field :password %>
 </p>
 
+<p>
+  <%= f.label :use_index, "Use individual sitemaps for each widget" %>
+  <%= f.check_box :use_index %>
+</p>
+
 <div id="save_actions">
 	<p><%= submit_tag "Save" %></p>
 </div>

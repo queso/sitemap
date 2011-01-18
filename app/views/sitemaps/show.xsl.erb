@@ -153,8 +153,9 @@
 					</table>
 				</div>
 				<div id="footer">
-					<p>Generated with <a href="http://seoandrails.com/" title="Google Sitemap Generator Plugin for Rails">Google Sitemap Generator Plugin for Rails</a>.</p>
+					<p>Generated with <a href="http://github.com/queso/sitemap" title="Google Sitemap Generator Plugin for Rails">Sitemap Generator Plugin for Rails</a>.</p>
 					<p>More information about XML sitemaps can be found at <a href="http://sitemaps.org">sitemaps.org</a> or at <a href="http://code.google.com/sm_thirdparty.html">Google's list of sitemap programs</a>.</p>
+					<p>Rendered in <%= sprintf "%.3f", (Time.now - @rendering_start_time) %> seconds.</p>
 				</div>
 			</body>
 		</html>

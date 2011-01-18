@@ -1,4 +1,5 @@
 class SitemapWidgetsController < SitemapPluginController
+  unloadable
   before_filter :find_widget, :only => [:edit, :update, :destroy]
   
   def index

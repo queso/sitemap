@@ -17,6 +17,10 @@ class SitemapWidget < ActiveRecord::Base
     widget_model.constantize
   end
   
+  def widget_model_name
+    widget_model.downcase
+  end
+  
   def finder
     method = (custom_finder.blank? || custom_finder.nil?) ? "find" : custom_finder.to_s
     method.to_sym

@@ -6,6 +6,7 @@ class <%= class_name %> < ActiveRecord::Migration
       t.string :xml_location
       t.string :username
       t.string :password
+      t.boolean :use_index
     
       t.timestamps
     end

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet version="2.0" 
+                xmlns:html="http://www.w3.org/TR/REC-html40"
+                xmlns:sitemap="http://www.sitemaps.org/schemas/sitemap/0.9"
+                xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+	<xsl:output method="html" version="1.0" encoding="UTF-8" indent="yes"/>
+	<xsl:template match="/">
+		<html xmlns="http://www.w3.org/1999/xhtml">
+			<head>
+				<title>XML Sitemap: <%= ((@site.blank? || @site.name.blank?) ? "Rails Web Application" : @site.name) %></title>
+				<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+				<style type="text/css">
+					* {
+						margin: 0;
+						padding: 0;
+					}
+
+					html, body {
+						height: 100%;
+						margin: 0 0 1px 0;
+						padding: 0;
+					}
+
+					body {
+						background: #fff;
+						color: #353535;
+						font: 62.5% Arial, Verdana, sans-serif;
+						padding: 20px;
+					}
+					
+					h1 {
+						color: #000;
+						font-weight: bold;
+						font-size: 4.4em;
+						margin-top: 30px;
+						margin-bottom: 30px;
+						text-align: center;
+					}
+					
+					#intro {
+						border-bottom: 1px solid #ccc;
+						color: #656565;
+						font: italic 1.4em Tahoma, Georgia, Times New Roman, sans-serif;
+						margin: 0 auto;
+						margin-bottom: 12px;
+						padding-bottom: 18px;
+						text-align: center;
+						width: 985px;
+					}
+					
+					#intro p {
+						font-size: 1.2em;
+						line-height: 1.5em;
+						margin-bottom: 8px;
+					}
+					
+					table {
+						font-size: 1.2em;
+						margin: 0 auto;
+						width: 985px;
+					}
+					
+					th {
+						font-size: 1.2em;
+						text-align: left;
+					}
+					
+					tr.high {
+						background-color: #e9e9e9;
+					}
+					
+					td {
+						border-bottom: 1px solid #ccc;
+						padding: 10px 0 10px 5px;
+					}
+					
+					#footer {
+						color: #171717;
+						font: 1.1em Verdana, sans-serif;
+						padding-top: 15px;
+						text-align: center;
+					}
+
+					#footer p {
+						margin-bottom: 8px;
+					}
+					
+					a {
+						color: #171717;
+						text-decoration: none;
+					}
+					
+					a:hover {
+						color: #000;
+						text-decoration: underline;
+					}
+					
+					#intro a {
+						text-decoration: underline;
+					}
+					
+					#footer a {
+						color: #777;
+						text-decoration: underline;
+					}
+					
+					#footer a:hover {
+						color: #555;
+					}
+				</style>
+			</head>
+			<body>
+				<h1>XML Sitemap: <%= ((@site.blank? || @site.name.blank?) ? "Rails Web Application" : @site.name) %></h1>
+				<div id="intro">
+					<p>This is an XML Sitemap generated using the <a href="http://github.com/sitemap">Sitemap Generator Plugin for Rails</a>.</p>
+					<p class="last">It is intended to be processed by search engines such as <a href="http://www.google.com">Google</a>, <a href="http://search.yahoo.com/">Yahoo Search</a>, <a href="http://www.live.com">Microsoft Live Search</a>, and <a href="http://www.ask.com/">Ask.com
+</a>.</p>
+				</div>
+				<div id="content">
+					<table border="0" cellspacing="0" cellpadding="0">
+						<tr>
+							<th>URL</th>
+							<th>Last Change</th>
+						</tr>
+						<xsl:variable name="lower" select="'abcdefghijklmnopqrstuvwxyz'"/>
+						<xsl:variable name="upper" select="'ABCDEFGHIJKLMNOPQRSTUVWXYZ'"/>
+						<xsl:for-each select="sitemap:sitemapindex/sitemap:sitemap">
+						<tr>
+							<xsl:if test="position() mod 2 != 1">
+								<xsl:attribute  name="class">high</xsl:attribute>
+							</xsl:if>
+							<td>
+								<xsl:variable name="itemURL">
+									<xsl:value-of select="sitemap:loc"/>
+								</xsl:variable>
+								<a href="{$itemURL}">
+									<xsl:value-of select="sitemap:loc"/>
+								</a>
+							</td>
+							<td>
+								<xsl:value-of select="concat(substring(sitemap:lastmod,0,11),concat(' ', substring(sitemap:lastmod,12,5)))"/>
+							</td>
+						</tr>
+						</xsl:for-each>
+					</table>
+				</div>
+				<div id="footer">
+					<p>Generated with <a href="http://github.com/queso/sitemap" title="Google Sitemap Generator Plugin for Rails">Sitemap Generator Plugin for Rails</a>.</p>
+					<p>More information about XML sitemaps can be found at <a href="http://sitemaps.org">sitemaps.org</a> or at <a href="http://code.google.com/sm_thirdparty.html">Google's list of sitemap programs</a>.</p>
+					<p>Rendered in <%= sprintf "%.3f", (Time.now - @rendering_start_time) %> seconds.</p>
+				</div>
+			</body>
+		</html>
+	</xsl:template>
+</xsl:stylesheet>

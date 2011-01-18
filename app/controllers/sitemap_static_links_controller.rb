@@ -1,4 +1,5 @@
 class SitemapStaticLinksController < SitemapPluginController
+  unloadable
   before_filter :find_static_link, :only => [:edit, :update, :destroy]
   
   def index
